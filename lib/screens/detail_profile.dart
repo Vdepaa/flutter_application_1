@@ -25,6 +25,7 @@ class _DetailProfileState extends State<DetailProfile> {
       setState(() {
         widget.profile.name = result.name;
         widget.profile.bio = result.bio;
+        widget.profile.desc16 = result.desc16;
       });
       Fluttertoast.showToast(msg: "Data berhasil diperbarui!");
     }
@@ -74,6 +75,10 @@ class _DetailProfileState extends State<DetailProfile> {
             const SizedBox(height: 8),
             Text(
               widget.profile.bio,
+              style: TextStyle(fontSize: 18, color: Colors.grey[600]),
+            ),
+            Text(
+              widget.profile.desc16,
               style: TextStyle(fontSize: 18, color: Colors.grey[600]),
             ),
             const SizedBox(height: 20),

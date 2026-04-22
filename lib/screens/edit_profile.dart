@@ -13,6 +13,7 @@ class _EditProfileState extends State<EditProfile> {
   final _formKey = GlobalKey<FormState>();
   late TextEditingController _nameController;
   late TextEditingController _bioController;
+  late TextEditingController _descController;
 
   @override
   void initState() {
@@ -20,12 +21,14 @@ class _EditProfileState extends State<EditProfile> {
 
     _nameController = TextEditingController(text: widget.profile.name);
     _bioController = TextEditingController(text: widget.profile.bio);
+    _descController = TextEditingController(text: widget.profile.desc16);
   }
 
   @override
   void dispose() {
     _nameController.dispose();
     _bioController.dispose();
+    _descController.dispose();
     super.dispose();
   }
 
@@ -48,6 +51,11 @@ class _EditProfileState extends State<EditProfile> {
                 controller: _bioController,
                 decoration: const InputDecoration(labelText: "Bio", border: OutlineInputBorder()),
               ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: _descController,
+                decoration: const InputDecoration(labelText: "Desc", border: OutlineInputBorder()),
+              ),
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
@@ -56,6 +64,7 @@ class _EditProfileState extends State<EditProfile> {
                     id: widget.profile.id,
                     name: _nameController.text,
                     bio: _bioController.text,
+                    desc16: _descController.text,
                   );
                   Navigator.pop(context, updatedData);
                 },

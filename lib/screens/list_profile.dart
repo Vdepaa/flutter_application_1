@@ -21,6 +21,7 @@ class _ListProfileState extends State<ListProfile> {
           id: lastIndex + 1,
           name: "Depakanh ${lastIndex + 1}",
           bio: "Mahasiswa",
+          desc16: "Hanghanghang",
         ),
       );
     });

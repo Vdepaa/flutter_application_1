@@ -129,7 +129,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         profile: Profile(
                           id: 1, 
                           name: namaController.text.isEmpty ? "No Name" : namaController.text, 
-                          bio: "Current Counter: $_counter"
+                          bio: "Current Counter: $_counter",
+                          desc16: "Current Counter: $_counter"
                         ),
                       ),
                     ),
