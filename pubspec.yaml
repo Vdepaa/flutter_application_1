@@ -1,0 +1,27 @@
+name: flutter_application_1
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.1.0 # Disesuaikan ke versi stabil yang umum digunakan saat ini
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  fluttertoast: ^8.2.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0 # Versi 6.0.0 belum rilis di 2024, disesuaikan ke yang stabil
+
+flutter:
+  uses-material-design: true
+
+  # Perapihan bagian Assets
+  assets:
+    - assets/images/
